@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/Ideapad%20GAMING/Downloads/Food%20Recommendation%20System1/Food%20Recommendation%20System/FoodRecSystem/web/index.jsp</file>
+            <file>file:/C:/Users/Ideapad%20GAMING/Downloads/Food%20Recommendation%20System1/Food%20Recommendation%20System/FoodRecSystem/src/java/util/DBConnection.java</file>
+            <file>file:/C:/Users/Ideapad%20GAMING/Downloads/Food%20Recommendation%20System1/Food%20Recommendation%20System/FoodRecSystem/web/register.jsp</file>
+            <file>file:/C:/Users/Ideapad%20GAMING/Downloads/Food%20Recommendation%20System1/Food%20Recommendation%20System/FoodRecSystem/web/logout.jsp</file>
+            <file>file:/C:/Users/Ideapad%20GAMING/Downloads/Food%20Recommendation%20System1/Food%20Recommendation%20System/FoodRecSystem/web/addFoodList.jsp</file>
+            <file>file:/C:/Users/Ideapad%20GAMING/Downloads/Food%20Recommendation%20System1/Food%20Recommendation%20System/FoodRecSystem/web/adminFoodList.jsp</file>
+            <file>file:/C:/Users/Ideapad%20GAMING/Downloads/Food%20Recommendation%20System1/Food%20Recommendation%20System/FoodRecSystem/web/processAddFood.jsp</file>
+            <file>file:/C:/Users/Ideapad%20GAMING/Downloads/Food%20Recommendation%20System1/Food%20Recommendation%20System/FoodRecSystem/web/editFood.jsp</file>
+            <file>file:/C:/Users/Ideapad%20GAMING/Downloads/Food%20Recommendation%20System1/Food%20Recommendation%20System/FoodRecSystem/web/index.html</file>
+            <file>file:/C:/Users/Ideapad%20GAMING/Downloads/Food%20Recommendation%20System1/Food%20Recommendation%20System/FoodRecSystem/src/java/FoodList/addFood.java</file>
+            <file>file:/C:/Users/Ideapad%20GAMING/Downloads/Food%20Recommendation%20System1/Food%20Recommendation%20System/FoodRecSystem/web/adminDashboard.jsp</file>
+            <file>file:/C:/Users/Ideapad%20GAMING/Downloads/Food%20Recommendation%20System1/Food%20Recommendation%20System/FoodRecSystem/web/login.jsp</file>
+            <file>file:/C:/Users/Ideapad%20GAMING/Downloads/Food%20Recommendation%20System1/Food%20Recommendation%20System/FoodRecSystem/src/java/controller/LoginServlet.java</file>
+            <file>file:/C:/Users/Ideapad%20GAMING/Downloads/Food%20Recommendation%20System1/Food%20Recommendation%20System/FoodRecSystem/web/userDashboard.jsp</file>
+            <file>file:/C:/Users/Ideapad%20GAMING/Downloads/Food%20Recommendation%20System1/Food%20Recommendation%20System/FoodRecSystem/web/userViewFood.jsp</file>
+            <file>file:/C:/Users/Ideapad%20GAMING/Downloads/Food%20Recommendation%20System1/Food%20Recommendation%20System/FoodRecSystem/web/updateFood.jsp</file>
+            <file>file:/C:/Users/Ideapad%20GAMING/Downloads/Food%20Recommendation%20System1/Food%20Recommendation%20System/FoodRecSystem/src/java/dao/UserDAO.java</file>
+            <file>file:/C:/Users/Ideapad%20GAMING/Downloads/Food%20Recommendation%20System1/Food%20Recommendation%20System/FoodRecSystem/src/java/controller/RegisterServlet.java</file>
+            <file>file:/C:/Users/Ideapad%20GAMING/Downloads/Food%20Recommendation%20System1/Food%20Recommendation%20System/FoodRecSystem/src/java/model/User.java</file>
+            <file>file:/C:/Users/Ideapad%20GAMING/Downloads/Food%20Recommendation%20System1/Food%20Recommendation%20System/FoodRecSystem/web/deleteFood.jsp</file>
+        </group>
+    </open-files>
+</project-private>
