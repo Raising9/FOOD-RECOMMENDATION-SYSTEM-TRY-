@@ -47,12 +47,20 @@ In today's digital era, people are often overwhelmed with food choices. Our syst
 ```
 FoodRecSystem/
 ├── Web Pages/
+│   ├── addFoodList.jsp
 │   ├── adminDashboard.jsp
+│   ├── adminFoodList.jsp
+│   ├── adviceFood.jsp
 │   ├── index.jsp
+│   ├── ingredientForm.jsp
+│   ├── ingredientsUser.jsp
 │   ├── login.jsp
 │   ├── logout.jsp
+│   ├── processAddFood.jsp
 │   ├── register.jsp
+│   ├── updateFood.jsp
 │   ├── userDashboard.jsp
+│   ├── userViewFood.jsp
 │   └── WEB-INF/
 │       ├── web.xml
 │   └── images/
@@ -63,12 +71,19 @@ FoodRecSystem/
 │       ├── register.jpg
 │       ├── salad.jpg
 ├── Source Packages/
+│   ├── FoodList/
+│   │   ├── addFood.java
 │   ├── controller/
 │   │   ├── LoginServlet.java, RegisterServlet.java
 │   ├── dao/
 │   │   └── UserDAO.java
 │   └── model/
+│       └── HealthAdvice.java
+│       └── ingredient.java
+│       └── ingredientDAOjava
 │       └── User.java
+│   └── servlet/
+│       └── IngredientServlet.java
 │   └── util/
 │       └── DBConnection.java
 ├── db/
@@ -99,12 +114,15 @@ Ensure the following libraries are added to your project:
 - `taglibs-standard-impl-1.2.5.jar`
 - `taglibs-standard-jstlel-1.2.5.jar`
 - `taglibs-standard-spec-1.2.5.jar`
+- `cos.jar`
+- `commons-io-2.11.0.jar`
+- `commons-fileupload-1.4.jar`
 
 
 ### 4. Configure MySQL
 
 - Create a database named `fooddb` and 'AddFood'
-- Run the SQL dump: `fooddb.sql` [`db/fooddb.sql`](db/fooddb.sql) and `AddFood.sql` [`db/AddFood.sql`](db/AddFood.sql) to create tables and sample data.
+- Run the SQL dump: `fooddb.sql` [`db/fooddb.sql`](db/fooddb.sql) and `addFood.sql` [`db/addFood.sql`](db/addFood.sql) to create tables and sample data.
 
 #### Option A: Edit `db.properties`
 Update the file with your actual MySQL credentials:
@@ -116,7 +134,7 @@ jdbcPassword = "admin";
 ```
 
 ```properties
-jdbcURL = "jdbc:mysql://localhost:3306/AddFood";
+jdbcURL = "jdbc:mysql://localhost:3306/addFood";
 jdbcUsername = "root";
 jdbcPassword = "admin";
 ```
