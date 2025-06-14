@@ -103,14 +103,20 @@ Ensure the following libraries are added to your project:
 
 ### 4. Configure MySQL
 
-- Create a database named `fooddb`
-- Run the SQL dump: `fooddb.sql` [`db/fooddb.sql`](db/fooddb.sql) to create tables and sample data.
+- Create a database named `fooddb` and 'AddFood'
+- Run the SQL dump: `fooddb.sql` [`db/fooddb.sql`](db/fooddb.sql) and `AddFood.sql` [`db/AddFood.sql`](db/AddFood.sql) to create tables and sample data.
 
 #### Option A: Edit `db.properties`
 Update the file with your actual MySQL credentials:
 
 ```properties
 jdbcURL = "jdbc:mysql://localhost:3306/fooddb";
+jdbcUsername = "root";
+jdbcPassword = "admin";
+```
+
+```properties
+jdbcURL = "jdbc:mysql://localhost:3306/AddFood";
 jdbcUsername = "root";
 jdbcPassword = "admin";
 ```
