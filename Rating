@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Food Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 30px;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ccc;
+            text-align: center;
+        }
+
+        .container img {
+            max-width: 300px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .section-wrapper {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            gap: 20px;
+        }
+
+        .box {
+            flex: 1;
+            background: #ffffff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 8px #ddd;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .box h3 {
+            text-align: center;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+
+        .box ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .box li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        /* Rating Section Styles */
+        .rating-section {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 8px #ddd;
+            margin-top: 20px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .rating-display {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .current-rating {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .stars-display {
+            font-size: 2em;
+            color: #ffc107;
+            margin-bottom: 10px;
+        }
+
+        .rating-stats {
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .rating-form {
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        .rating-form h4 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .star-rating {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            margin-bottom: 15px;
+        }
+
+        .star {
+            font-size: 2em;
+            color: #ddd;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .star:hover,
+        .star.active {
+            color: #ffc107;
+        }
+
+        .star.hover {
+            color: #ffeb3b;
+        }
+
+        .rating-form input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        .rating-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            resize: vertical;
+            min-height: 80px;
+            box-sizing: border-box;
+        }
+
+        .submit-btn {
+            background: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .submit-btn:hover {
+            background: #0056b3;
+        }
+
+        .reviews-section {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .review-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            border-left: 4px solid #007bff;
+        }
+
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .reviewer-name {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .review-stars {
+            color: #ffc107;
+        }
+
+        .review-date {
+            font-size: 0.8em;
+            color: #666;
+        }
+
+        .review-text {
+            color: #555;
+            line-height: 1.4;
+        }
+
+        @media (max-width: 768px) {
+            .section-wrapper {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Food Details</h2>
+    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=300&h=200&fit=crop" alt="Delicious Pizza">
+    <h3 id="foodName">Margherita Pizza</h3>
+    <p><strong>Type:</strong> <span id="foodType">Italian</span></p>
+</div>
+
+<div class="section-wrapper">
+    <!-- Ingredients Section -->
+    <div class="box">
+        <h3>Ingredients</h3>
+        <ul id="ingredientsList">
+            <li>Mozzarella Cheese - 200g</li>
+            <li>Tomato Sauce - 150ml</li>
+            <li>Fresh Basil - 20g</li>
+            <li>Pizza Dough - 300g</li>
+            <li>Olive Oil - 2 tbsp</li>
+            <li>Salt - 1 tsp</li>
+        </ul>
+    </div>
+
+    <!-- Health Advice Section -->
+    <div class="box">
+        <h3>Health Advice</h3>
+        <ul id="healthAdviceList">
+            <li><strong>Calcium:</strong> Rich in calcium from mozzarella cheese, good for bone health (Benefit)</li>
+            <li><strong>Lycopene:</strong> Tomatoes provide lycopene, an antioxidant that may reduce cancer risk (Benefit)</li>
+            <li><strong>Moderation:</strong> High in calories and sodium, consume in moderation (Caution)</li>
+            <li><strong>Fiber:</strong> Add whole wheat crust for additional fiber intake (Tip)</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Rating Section -->
+<div class="rating-section">
+    <div class="rating-display">
+        <div class="current-rating">
+            <strong>Average Rating: <span id="avgRating">4.2</span>/5</strong>
+        </div>
+        <div class="stars-display" id="starsDisplay">★★★★☆</div>
+        <div class="rating-stats">
+            Based on <span id="totalRatings">127</span> reviews
+        </div>
+    </div>
+
+    <div class="rating-form">
+        <h4>Rate this food:</h4>
+        <div class="star-rating" id="userStarRating">
+            <span class="star" data-rating="1">★</span>
+            <span class="star" data-rating="2">★</span>
+            <span class="star" data-rating="3">★</span>
+            <span class="star" data-rating="4">★</span>
+            <span class="star" data-rating="5">★</span>
+        </div>
+        <input type="text" id="reviewerName" placeholder="Your name (optional)" maxlength="50">
+        <textarea id="reviewText" placeholder="Write your review here (optional)"></textarea>
+        <button class="submit-btn" onclick="submitRating()">Submit Rating</button>
+    </div>
+
+    <div class="reviews-section" id="reviewsSection">
+        <h4>Recent Reviews:</h4>
+        <div class="review-item">
+            <div class="review-header">
+                <span class="reviewer-name">Sarah M.</span>
+                <div>
+                    <span class="review-stars">★★★★★</span>
+                    <span class="review-date">2 days ago</span>
+                </div>
+            </div>
+            <div class="review-text">Absolutely delicious! The perfect balance of cheese and tomato. Will definitely order again.</div>
+        </div>
+        <div class="review-item">
+            <div class="review-header">
+                <span class="reviewer-name">Mike R.</span>
+                <div>
+                    <span class="review-stars">★★★★☆</span>
+                    <span class="review-date">5 days ago</span>
+                </div>
+            </div>
+            <div class="review-text">Great taste, but could use a bit more basil. Overall very satisfied with the quality.</div>
+        </div>
+        <div class="review-item">
+            <div class="review-header">
+                <span class="reviewer-name">Emma L.</span>
+                <div>
+                    <span class="review-stars">★★★★★</span>
+                    <span class="review-date">1 week ago</span>
+                </div>
+            </div>
+            <div class="review-text">Perfect pizza! Fresh ingredients and excellent preparation. Highly recommended!</div>
+        </div>
+    </div>
+</div>
+
+<script>
+    let userRating = 0;
+    let ratings = [
+        {name: "Sarah M.", rating: 5, text: "Absolutely delicious! The perfect balance of cheese and tomato. Will definitely order again.", date: "2 days ago"},
+        {name: "Mike R.", rating: 4, text: "Great taste, but could use a bit more basil. Overall very satisfied with the quality.", date: "5 days ago"},
+        {name: "Emma L.", rating: 5, text: "Perfect pizza! Fresh ingredients and excellent preparation. Highly recommended!", date: "1 week ago"},
+        {name: "John D.", rating: 4, text: "Good quality ingredients, reasonable price.", date: "2 weeks ago"},
+        {name: "Lisa K.", rating: 3, text: "Average taste, nothing special but decent.", date: "3 weeks ago"}
+    ];
+
+    // Initialize star rating functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const stars = document.querySelectorAll('.star');
+        
+        stars.forEach(star => {
+            star.addEventListener('mouseover', function() {
+                const rating = parseInt(this.getAttribute('data-rating'));
+                highlightStars(rating, 'hover');
+            });
+            
+            star.addEventListener('mouseout', function() {
+                highlightStars(userRating, 'active');
+            });
+            
+            star.addEventListener('click', function() {
+                userRating = parseInt(this.getAttribute('data-rating'));
+                highlightStars(userRating, 'active');
+            });
+        });
+
+        updateAverageRating();
+    });
+
+    function highlightStars(rating, className) {
+        const stars = document.querySelectorAll('.star');
+        stars.forEach((star, index) => {
+            star.classList.remove('active', 'hover');
+            if (index < rating) {
+                star.classList.add(className);
+            }
+        });
+    }
+
+    function updateAverageRating() {
+        const totalRatings = ratings.length;
+        const sum = ratings.reduce((acc, review) => acc + review.rating, 0);
+        const average = (sum / totalRatings).toFixed(1);
+        
+        document.getElementById('avgRating').textContent = average;
+        document.getElementById('totalRatings').textContent = totalRatings;
+        
+        // Update stars display
+        const starsDisplay = document.getElementById('starsDisplay');
+        const fullStars = Math.floor(average);
+        const hasHalfStar = average % 1 >= 0.5;
+        
+        let starsHtml = '';
+        for (let i = 0; i < 5; i++) {
+            if (i < fullStars) {
+                starsHtml += '★';
+            } else if (i === fullStars && hasHalfStar) {
+                starsHtml += '☆';
+            } else {
+                starsHtml += '☆';
+            }
+        }
+        starsDisplay.textContent = starsHtml;
+    }
+
+    function submitRating() {
+        if (userRating === 0) {
+            alert('Please select a rating before submitting!');
+            return;
+        }
+
+        const reviewerName = document.getElementById('reviewerName').value.trim() || 'Anonymous';
+        const reviewText = document.getElementById('reviewText').value.trim() || 'No comment provided.';
+        
+        // Add new rating to the beginning of the array
+        const newReview = {
+            name: reviewerName,
+            rating: userRating,
+            text: reviewText,
+            date: 'Just now'
+        };
+        
+        ratings.unshift(newReview);
+        
+        // Update display
+        updateAverageRating();
+        displayReviews();
+        
+        // Reset form
+        userRating = 0;
+        highlightStars(0, 'active');
+        document.getElementById('reviewerName').value = '';
+        document.getElementById('reviewText').value = '';
+        
+        alert('Thank you for your rating!');
+    }
+
+    function displayReviews() {
+        const reviewsContainer = document.getElementById('reviewsSection');
+        let reviewsHtml = '<h4>Recent Reviews:</h4>';
+        
+        // Show only the first 5 reviews
+        const recentReviews = ratings.slice(0, 5);
+        
+        recentReviews.forEach(review => {
+            const stars = '★'.repeat(review.rating) + '☆'.repeat(5 - review.rating);
+            reviewsHtml += `
+                <div class="review-item">
+                    <div class="review-header">
+                        <span class="reviewer-name">${review.name}</span>
+                        <div>
+                            <span class="review-stars">${stars}</span>
+                            <span class="review-date">${review.date}</span>
+                        </div>
+                    </div>
+                    <div class="review-text">${review.text}</div>
+                </div>
+            `;
+        });
+        
+        reviewsContainer.innerHTML = reviewsHtml;
+    }
+
+    // Initialize reviews display
+    displayReviews();
+</script>
+
+</body>
+</html>
