@@ -42,8 +42,9 @@ In today's digital era, people are often overwhelmed with food choices. Our syst
 
 ---
 
-## 🧱 Project Structure
+## 📁 FoodRecSystem Project Structure
 
+```
 FoodRecSystem/
 │
 ├── Web Pages/
@@ -114,7 +115,8 @@ FoodRecSystem/
 │   └── util/
 │       └── DBConnection.java
 ├── db/
-│   └── studentdb.sql
+│   └── addfood.sql
+│   └── fooddb.sql
 ├── db.properties (excluded via .gitignore)
 └── README.md
 ```
