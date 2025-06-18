@@ -44,13 +44,37 @@ In today's digital era, people are often overwhelmed with food choices. Our syst
 
 ## 🧱 Project Structure
 
-```
 FoodRecSystem/
+│
 ├── Web Pages/
+│   ├── META-INF/
+│   ├── WEB-INF/
+│   │   └── web.xml
+│   ├── css/
+│   │   └── style.css
+│   ├── images/
+│   │   ├── addfood-bg.jpg
+│   │   ├── admin-bg.jpg
+│   │   ├── availablefood-bg.jpg
+│   │   ├── curry.jpg
+│   │   ├── foodlist.jpg
+│   │   ├── login-bg.jpg
+│   │   ├── logout-bg.jpg
+│   │   ├── protein.jpg
+│   │   ├── register-bg.jpg
+│   │   └── salad.jpg
 │   ├── addFoodList.jsp
 │   ├── adminDashboard.jsp
 │   ├── adminFoodList.jsp
-│   ├── adviceFood.jsp
+│   ├── adviceForm.jsp
+│   ├── deleteAdvice.jsp
+│   ├── deleteFood.jsp
+│   ├── deleteIngredient.jsp
+│   ├── deleteReview.jsp
+│   ├── editAdvice.jsp
+│   ├── editFood.jsp
+│   ├── editIngredient.jsp
+│   ├── index.html
 │   ├── index.jsp
 │   ├── ingredientForm.jsp
 │   ├── ingredientsUser.jsp
@@ -58,32 +82,35 @@ FoodRecSystem/
 │   ├── logout.jsp
 │   ├── processAddFood.jsp
 │   ├── register.jsp
+│   ├── review.jsp
+│   ├── submitReview.jsp
 │   ├── updateFood.jsp
 │   ├── userDashboard.jsp
 │   ├── userViewFood.jsp
-│   └── WEB-INF/
-│       ├── web.xml
-│   └── images/
-│       ├── curry.jpg
-│       ├── login-bg.jpg
-│       ├── logout-bg.jpg
-│       ├── protein.jpg
-│       ├── register.jpg
-│       ├── salad.jpg
+│   └── viewFoodDetails.jsp
+│
 ├── Source Packages/
+│   ├── (default package)/
+│   │   └── TestConnection.java
 │   ├── FoodList/
-│   │   ├── addFood.java
+│   │   └── addFood.java
 │   ├── controller/
-│   │   ├── LoginServlet.java, RegisterServlet.java
+│   │   ├── AddFoodServlet.java
+│   │   ├── LoginServlet.java
+│   │   ├── RegisterServlet.java
+│   │   ├── SubmitReviewServlet.java
+│   │   └── UpdateIngredientServlet.java
 │   ├── dao/
+│   │   ├── ReviewDAO.java
 │   │   └── UserDAO.java
-│   └── model/
-│       └── HealthAdvice.java
-│       └── ingredient.java
-│       └── ingredientDAOjava
-│       └── User.java
-│   └── servlet/
-│       └── IngredientServlet.java
+│   ├── model/
+│   │   ├── HealthAdvice.java
+│   │   ├── Ingredient.java
+│   │   ├── IngredientDAO.java
+│   │   ├── Review.java
+│   │   └── User.java
+│   ├── servlet/
+│   │   └── IngredientServlet.java
 │   └── util/
 │       └── DBConnection.java
 ├── db/
