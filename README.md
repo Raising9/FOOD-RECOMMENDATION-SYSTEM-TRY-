@@ -16,7 +16,7 @@ In today's digital era, people are often overwhelmed with food choices. Our syst
 |----|--------------------------------------------------|-----------|-------------------------------------------------|
 | 1  | Nurul Syamimi Binti Kamaruddin                   | S70166    | Register & Login (User Management)              |
 | 2  | Muhammad Sharmin Aiman Bin Jafri                 | S62899    | Admin Food Management                           |
-| 3  | Wan Muhammad Zakwan Al-Hakim Bin Wan Mohd Azman | S63769    | Web Facts & User Reviews Module                 |
+| 3  | Wan Muhammad Zakwan Al-Hakim Bin Wan Mohd Azman | S63769    | User Reviews Module                 |
 | 4  | Nur Ainin Sofia Binti Suhaimi                    | S72050    | Ingredient List & Health Recommendation Module  |
 
 ---
