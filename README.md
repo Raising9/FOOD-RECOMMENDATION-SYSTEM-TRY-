@@ -128,7 +128,8 @@ FoodRecSystem/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/FoodRecSystem.git
+git clone https://github.com/Raising9/FoodRecSystem.git
+github.com/Syasmurf/FOOD-RECOMMENDATION-SYSTEM
 ```
 
 ### 2. Open in NetBeans
